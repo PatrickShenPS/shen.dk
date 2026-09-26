@@ -15,7 +15,7 @@ const translations = {
     },
     heroTitle: 'Softwareudvikler med fokus på algoritmer, systemdesign og web.',
     heroSummary:
-      'Nyuddannet bachelor i softwareudvikling fra IT-Universitetet i København med et stærkt fagligt fundament inden for algoritmer, datastrukturer, softwarearkitektur og full-stack webudvikling.',
+      'Nyuddannet bachelor i softwareudvikling fra IT-Universitetet i København med et stærkt fagligt fundament inden for algoritmer, datastrukturer, softwarearkitektur og full-stack webudvikling. Jeg er på nuværende tidsspunkt i gang med en kandidatuddannelse i Spilteknologi på ITU.',
     highlightsTitle: 'Højdepunkter',
     highlights: [
       'Full-stack udvikling i C#, React og Azure',
@@ -23,7 +23,7 @@ const translations = {
     ],
     aboutHeading: 'Om mig',
     aboutText:
-      'Jeg er en nyuddannet softwareudvikler, der kombinerer stærk teoretisk viden med praktisk problemløsning. Fra komplekse algoritmer og grafproblemer til praktisk IT-support og undervisning er jeg vant til at løse opgaver både struktureret og samarbejdende.',
+      'Jeg er en nyuddannet softwareudvikler, der kombinerer stærk teoretisk viden med praktisk problemløsning. Fra komplekse algoritmer og grafproblemer til praktisk IT-support og undervisning er jeg vant til at løse opgaver både struktureret og samarbejdende. Jeg er på nuværende tidsspunkt i gang med en kandidatuddannelse i Spilteknologi på ITU.',
     educationHeading: 'Akademisk baggrund',
     experienceHeading: 'Professionel erfaring',
     projectsHeading: 'Projektarbejde',
@@ -34,6 +34,11 @@ const translations = {
       dob: 'Fødselsdato: 14. januar 2003',
     },
     education: [
+      {
+        title: 'Master i Games (Tech Track)',
+        place: 'IT-Universitetet i København',
+        period: '2026 – Nu',
+      },
       {
         title: 'Bachelor (BSc) i Softwareudvikling',
         place: 'IT-Universitetet i København',
@@ -162,7 +167,7 @@ const translations = {
     },
     heroTitle: 'Software developer focused on algorithms, system design, and web technologies.',
     heroSummary:
-      'A newly graduated software engineering bachelor from IT University of Copenhagen with a strong foundation in algorithms, data structures, software architecture, and full-stack web development.',
+      "A newly graduated software engineering bachelor from IT University of Copenhagen with a strong foundation in algorithms, data structures, software architecture, and full-stack web development. I am currently pursuing a Master's degree in Games with a focus on Technology at the IT University of Copenhagen.",
     highlightsTitle: 'Highlights',
     highlights: [
       'Full-stack development in C#, React, and Azure',
@@ -170,7 +175,7 @@ const translations = {
     ],
     aboutHeading: 'About me',
     aboutText:
-      'I am a newly graduated software developer who combines strong theoretical knowledge with practical problem-solving. From complex algorithms and graph problems to practical IT support and teaching, I am used to solving tasks both systematically and collaboratively.',
+      "I am a newly graduated software developer who combines strong theoretical knowledge with practical problem-solving. From complex algorithms and graph problems to practical IT support and teaching, I am used to solving tasks both systematically and collaboratively. I am currently pursuing a Master’s degree in Games with a focus on Technology at the IT University of Copenhagen.",
     educationHeading: 'Academic background',
     experienceHeading: 'Professional experience',
     projectsHeading: 'Project work',
@@ -181,6 +186,11 @@ const translations = {
       dob: 'Date of birth: 14 January 2003',
     },
     education: [
+      {
+        title: 'Master’s in Games (Tech Track)',
+        place: 'IT University of Copenhagen',
+        period: '2026 – Present',
+      },
       {
         title: 'Bachelor (BSc) in Software Development',
         place: 'IT University of Copenhagen',
