@@ -3,6 +3,7 @@ import { BrowserRouter, Route, Routes } from 'react-router-dom'
 import Welcome from './Pages/Welcome'
 import Home from './Pages/Home'
 import Games from './Pages/Games'
+import GameDetail from './Pages/GameDetail'
 import About from './Pages/About'
 
 function App() {
@@ -29,6 +30,7 @@ function App() {
         <Route path="/" element={<Welcome />} />
         <Route path="/portfolio" element={<Home />} />
         <Route path="/games" element={<Games />} />
+        <Route path="/games/:slug" element={<GameDetail />} />
         <Route path="/about" element={<About />} />
       </Routes>
     </BrowserRouter>

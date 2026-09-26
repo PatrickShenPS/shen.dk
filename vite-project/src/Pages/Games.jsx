@@ -1,23 +1,13 @@
 import { Link } from 'react-router-dom'
 
-const games = [
+export const games = [
   {
-    title: 'Prototype 01',
-    type: 'Action / Puzzle',
+    slug: 'ice-box',
+    title: 'Ice Box',
+    type: 'Puzzle / Logic',
     description:
-      'A small playable prototype focused on fast reactions, level flow, and polished feedback loops.',
-  },
-  {
-    title: 'Prototype 02',
-    type: 'Strategy / Systems',
-    description:
-      'An experimental game design project exploring progression, economy, and decision-driven gameplay.',
-  },
-  {
-    title: 'Prototype 03',
-    type: 'Arcade / Exploration',
-    description:
-      'A concept prototype built to test movement, atmosphere, and player rhythm in a compact experience.',
+      'A browser-based PuzzleScript prototype using box-pushing, movement, and spatial reasoning.',
+    src: '/ice-box.html',
   },
 ]
 
@@ -119,13 +109,19 @@ function Games() {
           }}
         >
           {games.map((game) => (
-            <article
-              key={game.title}
+            <Link
+              key={game.slug}
+              to={game.src ? `/games/${game.slug}` : '#'}
               style={{
+                display: 'block',
+                textDecoration: 'none',
                 background: 'var(--card)',
                 border: '1px solid var(--secondary)',
                 borderRadius: '20px',
+                overflow: 'hidden',
                 padding: '1.5rem',
+                color: 'var(--text)',
+                cursor: game.src ? 'pointer' : 'default',
               }}
             >
               <p style={{ margin: 0, color: 'var(--text)', fontSize: '0.82rem', fontWeight: 700, letterSpacing: '0.08em', textTransform: 'uppercase' }}>
@@ -133,7 +129,26 @@ function Games() {
               </p>
               <h2 style={{ margin: '0.8rem 0', fontSize: '1.6rem', color: 'var(--text)' }}>{game.title}</h2>
               <p style={{ margin: 0, lineHeight: 1.7, color: 'var(--text)' }}>{game.description}</p>
-            </article>
+
+              {game.src && (
+                <div
+                  style={{
+                    marginTop: '1rem',
+                    display: 'inline-flex',
+                    alignItems: 'center',
+                    gap: '0.5rem',
+                    color: 'var(--buttonText)',
+                    background: 'var(--primary)',
+                    borderRadius: '999px',
+                    padding: '0.65rem 1rem',
+                    fontWeight: 700,
+                  }}
+                >
+                  Play game
+                  <span aria-hidden="true">→</span>
+                </div>
+              )}
+            </Link>
           ))}
         </section>
       </div>
