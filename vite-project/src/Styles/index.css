@@ -1,68 +1,101 @@
 :root {
-  font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
+  --bg: #F2EFE7;
+  --bg-soft: #C8DFDB;
+  --primary: #3368A0;
+  --secondary: #66A3BF;
+  --card: #C8DFDB;
+  --chip: #F2EFE7;
+  --buttonText: #F2EFE7;
+  --text: #3368A0;
+  --muted: #3368A0;
+
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   line-height: 1.5;
   font-weight: 400;
-
-  color-scheme: light dark;
-  color: rgba(255, 255, 255, 0.87);
-  background-color: #242424;
-
+  color: var(--text);
+  background: var(--bg);
   font-synthesis: none;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
-a {
-  font-weight: 500;
-  color: #646cff;
-  text-decoration: inherit;
-}
-a:hover {
-  color: #535bf2;
+html[data-theme='dark'] {
+  --bg: #132433;
+  --bg-soft: #1d3245;
+  --primary: #C8DFDB;
+  --secondary: #66A3BF;
+  --card: #1d3245;
+  --chip: #132433;
+  --buttonText: #132433;
+  --text: #EAF6F7;
+  --muted: #EAF6F7;
 }
 
-.body {
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
   margin: 0;
-  display: flex;
-  place-items: center;
   min-width: 320px;
+  min-height: 100vh;
+  background: var(--bg);
+  color: var(--text);
+}
+
+#root {
   min-height: 100vh;
 }
 
-h1 {
-  font-size: 3.2em;
-  line-height: 1.1;
+a {
+  color: inherit;
+  text-decoration: none;
 }
 
-button {
-  border-radius: 8px;
-  border: 1px solid transparent;
-  padding: 0.6em 1.2em;
-  font-size: 1em;
-  font-weight: 500;
-  font-family: inherit;
-  background-color: #1a1a1a;
+p,
+ul,
+h1,
+h2,
+h3,
+h4 {
+  margin-top: 0;
+}
+
+.themeToggle {
+  position: fixed;
+  top: 1rem;
+  right: 1rem;
+  z-index: 30;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 2.75rem;
+  height: 2.75rem;
+  border: 1px solid var(--secondary);
+  background: transparent;
+  color: var(--text);
+  border-radius: 50%;
   cursor: pointer;
-  transition: border-color 0.25s;
-}
-button:hover {
-  border-color: #646cff;
-}
-button:focus,
-button:focus-visible {
-  outline: 4px auto -webkit-focus-ring-color;
+  padding: 0;
+  transition: background 0.2s ease, border-color 0.2s ease, transform 0.2s ease;
 }
 
-@media (prefers-color-scheme: light) {
-  :root {
-    color: #213547;
-    background-color: #ffffff;
-  }
-  a:hover {
-    color: #747bff;
-  }
-  button {
-    background-color: #f9f9f9;
-  }
+.themeToggle:hover {
+  background: var(--bg-soft);
+}
+
+.themeToggle:active {
+  transform: scale(0.98);
+}
+
+.themeToggle span {
+  font-size: 1.1rem;
+  line-height: 1;
+  display: inline-block;
+  transform: translateY(-1px);
 }
